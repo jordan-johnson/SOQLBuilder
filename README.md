@@ -27,6 +27,12 @@ soql.whereBy('Field__c', soql.enclose('value'), true);
 I might keep the original whereBy function and just overload it with the above params.
 
 ## How to use
+### Contents
+*	[Standard Usage](#standard-usage)
+*	[whereBy](#whereBy)
+*	[limitTo](#limitTo)
+*	[orderBy](#orderBy)
+
 ### Standard Usage
 ```apex
 SOQLBuilder soql = new SOQLBuilder();
