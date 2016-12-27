@@ -47,30 +47,19 @@ List<SObject> results = soql.selectAllFields();
 Conditional for query.
 
 ```apex
-// ...
-
 soql.whereBy('Field__c = \'value\'');
-
-// ...
 ```
 
 ### limitTo
 Only select X amount of records.
 
 ```apex
-// ...
-
 soql.limitTo(5);
-
-// ...
 ```
 
 ### orderBy
 Order records ASC or DESC
 
 ```apex
-// ...
-
 soql.orderBy('Field__c', 'ASC');
-
-// ...
+```
