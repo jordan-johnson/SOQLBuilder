@@ -69,6 +69,6 @@ soql.orderBy('Field__c', 'ASC');
 ```apex
 List<SObject> results = soql.selectAllFields();
 
-// ... recast to your object ...
+// recast to your object
 My_Custom_Object__c obj = (My_Custom_Object__c)results[0];
 ```
