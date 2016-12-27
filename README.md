@@ -1,5 +1,5 @@
 # SOQLBuilder
-Quickly query in Apex (Salesforce). I built this because sometimes you'll need to pull a bunch of fields from an object which creates messy code.
+Quickly query in Apex (Salesforce). I built this because sometimes you'll need to pull a bunch of fields from an object which creates messy code. SOQL doesn't support something like "SELECT * FROM ..." so this can help with that.
 
 ## To do
 *	Write test class
@@ -32,6 +32,7 @@ I might keep the original whereBy function and just overload it with the above p
 *	[whereBy](#whereBy)
 *	[limitTo](#limitTo)
 *	[orderBy](#orderBy)
+*	[selectAllFields](#selectAllFields)
 
 ### Standard Usage
 ```apex
@@ -62,4 +63,12 @@ Order records ASC or DESC
 
 ```apex
 soql.orderBy('Field__c', 'ASC');
+```
+
+### selectAllFields
+```apex
+List<SObject> results = soql.selectAllFields();
+
+// ... recast to your object ...
+My_Custom_Object__c obj = (My_Custom_Object__c)results[0];
 ```
