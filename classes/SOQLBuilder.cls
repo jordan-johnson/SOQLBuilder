@@ -178,8 +178,6 @@ public class SOQLBuilder {
             
         if(orderResults != null)
             query += orderResults;
-            
-        System.Debug('qry::' + query);
         
         results = Database.query(query);
         return results;
